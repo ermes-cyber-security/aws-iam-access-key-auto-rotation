@@ -780,7 +780,7 @@ def get_actions_for_account(account_session, force_rotate_users):
                         f'--User [{user_name}] is tagged with owner [{resource_owner_email}].'
                     )
                     for action in user_actions:
-                        action.update({"resource_email": resource_owner_email})
+                        action.update({"resource_owner": resource_owner_email})
                 else:
                     log.info(
                         f'--User [{user_name}] is missing a [{config.resourceOwnerTag}] tag.'
